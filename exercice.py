@@ -6,37 +6,55 @@ from typing import List
 
 
 def convert_to_absolute(number: float) -> float:
-    number = (number**2)/number
+    number = (number**2) * (number**1/2)
     return number
 
 
 def use_prefixes() -> List[str]:
     prefixes, suffixe = 'JKLMNOPQ', 'ack'
+    duck_name = []
     for current_prefixes in prefixes:
-        duck_name = print(current_prefixes + suffixe)
+        duck_name.append(current_prefixes + suffixe)
 
     return duck_name
 
 
 def prime_integer_summation() -> int:
-    somme_nombre_entiers = 0
-    for nombres_entiers in range[100]:
-        if (nombres_entiers/2) != (nombres_entiers%2):
-            somme_nombre_entiers += nombres_entiers
-    return somme_nombre_entiers
+
+    pass
 
 
 def factorial(number: int) -> int:
-    return 0
+
+    pass
 
 
 def use_continue() -> None:
+    for i in range(1,11):
+        if i == 5:
+            continue
+        print(i)
+        i+=1
+
     pass
 
 
 def verify_ages(groups: List[List[int]]) -> List[bool]:
-    return []
+    acceptance = []
+    for sub_group in groups:
+        if len(sub_group) > 10 or len(sub_group) <= 3:
+            acceptance.append(False)
+            continue
+        if 25 in sub_group:
+            acceptance.append(True)
+            continue
+        if (min(sub_group) < 18) or (50 in sub_group and max(sub_group) > 70):
+            acceptance.append(False)
+            continue
 
+        acceptance.append(True)
+
+    return acceptance
 
 def main() -> None:
     number = -4.325
