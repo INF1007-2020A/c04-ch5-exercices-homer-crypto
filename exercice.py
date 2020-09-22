@@ -13,13 +13,17 @@ def convert_to_absolute(number: float) -> float:
 def use_prefixes() -> List[str]:
     prefixes, suffixe = 'JKLMNOPQ', 'ack'
     for current_prefixes in prefixes:
-        print(current_prefixes + suffixe)
+        duck_name = print(current_prefixes + suffixe)
 
-    return [""]
+    return duck_name
 
 
 def prime_integer_summation() -> int:
-    return 0
+    somme_nombre_entiers = 0
+    for nombres_entiers in range[100]:
+        if (nombres_entiers/2) != (nombres_entiers%2):
+            somme_nombre_entiers += nombres_entiers
+    return somme_nombre_entiers
 
 
 def factorial(number: int) -> int:
