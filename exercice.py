@@ -6,11 +6,14 @@ from typing import List
 
 
 def convert_to_absolute(number: float) -> float:
-    return 0
+    number = (number**2)/number
+    return number
 
 
 def use_prefixes() -> List[str]:
     prefixes, suffixe = 'JKLMNOPQ', 'ack'
+    for current_prefixes in prefixes:
+        print(current_prefixes + suffixe)
 
     return [""]
 
